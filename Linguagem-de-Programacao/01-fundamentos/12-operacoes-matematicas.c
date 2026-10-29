@@ -9,7 +9,7 @@ seguintes operacoes:
 */
 
 #include <stdio.h>
-#include <math.h>  // pow
+#include <math.h> 
 
 int main() {
     int a, b;
