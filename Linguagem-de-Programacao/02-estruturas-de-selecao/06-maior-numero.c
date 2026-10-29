@@ -9,7 +9,7 @@ int main()
     printf("Digite três números:\n");
     scanf("%d %d %d", &a, &b, &c);
 
-    if ((a >= b) && (a >= c)) // ESTUDAR MAIS!!!!!
+    if ((a >= b) && (a >= c))
     {
         maior_numero = a;
     }
