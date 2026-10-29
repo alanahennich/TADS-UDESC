@@ -20,7 +20,7 @@ int main()
     }
     else
     {
-        if (idade <= 65) // menor OU igual!!!!
+        if (idade <= 65) 
         {
             printf("Eleitor obrigatório");
         }
