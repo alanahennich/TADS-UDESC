@@ -18,6 +18,7 @@ Os exercícios estão organizados por pastas:
 - `02-java.lang`
 - `03-classes-e-objetos` 
 - `04-coleções`
+- `05-trabalho-final`
 
 ## 💻 Linguagem
 
