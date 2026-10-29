@@ -14,7 +14,7 @@ int main()
     printf("Insira a sua idade:\n");
     scanf("%d", &idade);
 
-    if (idade < 18) // sinal de menor
+    if (idade < 18) 
     {
         printf("Não eleitor");
     }
