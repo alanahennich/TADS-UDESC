@@ -1,24 +1,22 @@
-# Calculadora em Java
+## Sobre o Projeto
 
-Calculadora com interface gráfica (Java Swing), desenvolvida no NetBeans, capaz de realizar as quatro operações básicas da matemática: soma, subtração, multiplicação e divisão.
+Desenvolvimento de uma calculadora em Java com interface gráfica, capaz de realizar as quatro operações matemáticas básicas: adição, subtração, multiplicação e divisão.
 
-## Enunciado
+O projeto foi desenvolvido como trabalho final da disciplina de **Programação Orientada a Objetos**, utilizando a IDE **Apache NetBeans**.
 
-Desenvolver um programa em Java capaz de realizar as quatro operações básicas (soma, subtração, multiplicação e divisão).
+### Requisitos e Funcionalidades
 
-### Requisitos da interface
+- Interface gráfica semelhante à de uma calculadora convencional;
+- Botões individuais para os números de 0 a 9;
+- Botões individuais para as quatro operações matemáticas básicas (adição, subtração, multiplicação e divisão);
+- Botão de igualdade (`=` ou `ENTER`) para executar os cálculos;
+- Botão de reset (`RESET`) para limpar os valores e reiniciar os cálculos;
+- Display para exibição dos números e resultados das operações.
 
-- Interface gráfica com a aparência de uma calculadora convencional;
-- Botões independentes para os números de 0 a 9;
-- Botões independentes para as quatro operações básicas;
-- Um botão para executar o cálculo (ENTER/igual);
-- Um botão para resetar os cálculos;
-- Um visor (display) para exibir os valores.
+### Regras de Funcionamento
 
-### Regras de funcionamento
-
-- A calculadora deve realizar corretamente as quatro operações com números de **até 3 dígitos** (e não mais), aceitando **apenas números inteiros**;
-- O resultado deve ser exibido tanto no **console (terminal)** quanto na **interface gráfica (display)**;
-- O resultado da divisão deve ser **apenas a parte inteira** do quociente;
-- O display só pode exibir mais de 3 dígitos quando o resultado de uma operação tiver essa magnitude;
-- O número mostrado no display deve ser preservado e utilizado na próxima operação.
+- Realizar as quatro operações básicas utilizando exclusivamente números inteiros de até três dígitos;
+- Exibir os resultados tanto no display da interface gráfica quanto no terminal (console);
+- Apresentar apenas a parte inteira do resultado das divisões;
+- Permitir que o display exiba mais de três dígitos quando o resultado da operação ultrapassar esse limite;
+- Preservar o resultado exibido no display para que possa ser utilizado como valor na operação seguinte.
