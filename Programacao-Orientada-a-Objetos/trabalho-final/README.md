@@ -22,8 +22,9 @@ O projeto foi desenvolvido como trabalho final da disciplina de **Programação 
 - Preservar o resultado exibido no display para que possa ser utilizado como valor na operação seguinte.
 
 
+
 ## Interface da Calculadora
 
-<p align="center">
-  <img src="imagens/calculadora2.png" alt="Interface da Calculadora" width="400">
+<p align="left">
+  <img src="imagens/calculadora1.png" width="300">
 </p>
