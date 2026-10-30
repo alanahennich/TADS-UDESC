@@ -1,13 +1,150 @@
-Complete o programa em Java apresentado. O arquivo principal não deve ser modificado. 
+# Exercício – Orientação a Objetos
 
-O arquivo veiculo deve conter os atributos: ano, chassi, preco, quilometragem, SemParar. Os dois primeiros são do tipo int, e os depois são do tipo float. SemParar é um atributo que representa uma quantia em dinheiro (qualquer alusão a uma empresa real é mera coincidência). Além dos atributos, há ainda o método PagarPedagio() e o método construtor que deve receber em ordem os seguintes argumentos: int ano, int chassi, float preco, float SemParar. 
+## Objetivo
 
-O arquivo moto é uma classe que herda classe veiculo e que deve conter o atributo: cilindradas. Do tipo inteiro. Além do atributo,  há ainda o método PagarPedagio() que deve debitar 10 e o método construtor que deve receber em ordem os seguintes argumentos: int ano, int chassi, float preco, float SemParar, int cilindradas. Utilize SUPER() para chamar a superclasse e inicializar os atributos em comum.
+Complete o programa em Java apresentado, implementando as classes, atributos, métodos e relacionamentos de herança descritos a seguir.
 
-O arquivo caminhao é uma classe que herda classe veiculo e que deve conter os atributos: CapacidadeTotal e CapacidadeAtual. Do tipo inteiro. Além dos atributos,  há ainda o método PagarPedagio() que deve debitar 40 e o método construtor que deve receber em ordem os seguintes argumentos: int ano, int chassi, float preco, float SemParar, int CapacidadeTotal. Utilize SUPER() para chamar a superclasse e inicializar os atributos em comum.  
+> **Importante:** O arquivo principal (`Main`) não deve ser modificado.
 
-O arquivo carro é uma classe que herda classe veiculo e que deve conter os atributos: automatico, frequencia e amplitude. Automatico é do tipo lógico e representa se o carro tem ou não câmbio automático. Frequencia e amplitude são objetos do tipo Radio. Além dos atributos,  há ainda o método PagarPedagio() que deve debitar 20 e o método construtor que deve receber em ordem os seguintes argumentos: int ano, int chassi, float preco, float SemParar, boolean automatico. Utilize SUPER() para chamar a superclasse e inicializar os atributos em comum.
+## 1. Classe `Veiculo`
 
-O arquivo radio é uma classe sem herança  que deve conter os atributos: estacao, canal e volume. Do tipo String, inteiro e inteiro respectivamente.
+A classe `Veiculo` deve conter os seguintes atributos:
 
-Todas as classes devem ter gerados os getters e os setters dos seus atributos (mesmo que não sejam usados). No caso do arquivo caminhao o método para alterar o atributo CapacidadeAtual deve receber um valor do tipo inteiro que não ultrapasse CapacidadeTotal, do contrário uma mensagem deve ser exibida: "Carga excedida!". No caso do método construtor do radio, a estação AM deve ser inicializada em 20 e a estação FM deve ser inicializada em 80. Os métodos para aumentar e diminuir o valor do voleme devem incrimentar ou decrementar 10. O volume máximo não pode ultrapassar 100 e nem ficar abaixo de 0. Por fim, o método PagarPedagio() de cada classe deve imprimir: "Dinheiro: $$" (onde o $$ deve ser substituito pelo valor do atributo SemParar. E caso não exista valor suficiente para o pagar o pedágio a seguinte mensagem deve ser exibida: "Moto sem dinheiro suficiente!" (supondo que foi uma Moto que não tinha dinheiro). 
+| Atributo | Tipo |
+|---|---|
+| `ano` | `int` |
+| `chassi` | `int` |
+| `preco` | `float` |
+| `quilometragem` | `float` |
+| `semParar` | `float` |
+
+Além dos atributos, deve implementar:
+- Método `PagarPedagio()`.
+- Construtor que receba, nesta ordem:
+  - `int ano`
+  - `int chassi`
+  - `float preco`
+  - `float semParar`
+
+## 2. Classe `Moto`
+
+A classe `Moto` deve herdar da classe `Veiculo` e conter o seguinte atributo:
+
+| Atributo | Tipo |
+|---|---|
+| `cilindradas` | `int` |
+
+**Métodos e construtor:**
+- Implementar o método `PagarPedagio()`, que deve debitar **10** do saldo `semParar`.
+- Criar um construtor que receba, nesta ordem:
+  - `int ano`
+  - `int chassi`
+  - `float preco`
+  - `float semParar`
+  - `int cilindradas`
+- Utilizar `super()` para chamar a superclasse e inicializar os atributos em comum.
+
+## 3. Classe `Caminhao`
+
+A classe `Caminhao` deve herdar da classe `Veiculo` e conter os seguintes atributos:
+
+| Atributo | Tipo |
+|---|---|
+| `capacidadeTotal` | `int` |
+| `capacidadeAtual` | `int` |
+
+**Métodos e construtor:**
+- Implementar o método `PagarPedagio()`, que deve debitar **40** do saldo `semParar`.
+- Criar um construtor que receba, nesta ordem:
+  - `int ano`
+  - `int chassi`
+  - `float preco`
+  - `float semParar`
+  - `int capacidadeTotal`
+- Utilizar `super()` para inicializar os atributos em comum.
+
+**Regra para alteração da capacidade atual:**
+
+O método responsável por alterar `capacidadeAtual` deve receber um valor inteiro que não ultrapasse `capacidadeTotal`.
+
+Caso o valor informado ultrapasse o limite, deverá exibir a mensagem:
+
+```text
+Carga excedida!
+```
+
+## 4. Classe `Carro`
+
+A classe `Carro` deve herdar da classe `Veiculo` e conter os seguintes atributos:
+
+| Atributo | Tipo |
+|---|---|
+| `automatico` | `boolean` |
+| `frequencia` | `Radio` |
+| `amplitude` | `Radio` |
+
+O atributo `automatico` indica se o veículo possui câmbio automático ou não. Já `frequencia` e `amplitude` são objetos da classe `Radio`.
+
+**Métodos e construtor:**
+- Implementar o método `PagarPedagio()`, que deve debitar **20** do saldo `semParar`.
+- Criar um construtor que receba, nesta ordem:
+  - `int ano`
+  - `int chassi`
+  - `float preco`
+  - `float semParar`
+  - `boolean automatico`
+- Utilizar `super()` para inicializar os atributos em comum.
+
+## 5. Classe `Radio`
+
+A classe `Radio` não possui herança e deve conter os seguintes atributos:
+
+| Atributo | Tipo |
+|---|---|
+| `estacao` | `String` |
+| `canal` | `int` |
+| `volume` | `int` |
+
+**Requisitos:**
+
+- No construtor, inicializar:
+  - Estação AM com valor **20**.
+  - Estação FM com valor **80**.
+- Implementar métodos para aumentar e diminuir o volume em incrementos de **10**.
+- O volume máximo permitido é **100**.
+- O volume mínimo permitido é **0**.
+
+## 6. Requisitos gerais
+
+Todas as classes devem possuir getters e setters para seus respectivos atributos, mesmo que não sejam utilizados no programa principal.
+
+**Pagamento de pedágio:**
+
+O método `PagarPedagio()` de cada classe deve:
+1. Verificar se existe saldo suficiente para pagar o pedágio.
+2. Caso exista saldo suficiente, debitar o valor correspondente.
+3. Imprimir o saldo atualizado no formato:
+
+```text
+Dinheiro: $$
+```
+
+Onde `$$` representa o valor atual do atributo `semParar`.
+
+Caso não exista saldo suficiente, deverá exibir uma mensagem informando que o veículo não possui dinheiro suficiente para pagar o pedágio. Por exemplo:
+
+```text
+Moto sem dinheiro suficiente!
+```
+
+### Valores de pedágio
+
+| Classe | Valor |
+|---|---:|
+| `Moto` | 10 |
+| `Carro` | 20 |
+| `Caminhao` | 40 |
+
+---
+
+**Conceitos trabalhados:** Classes e objetos, encapsulamento, construtores, herança, sobrescrita de métodos (`@Override`), reutilização de código e validação de atributos.
