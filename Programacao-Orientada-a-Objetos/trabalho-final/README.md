@@ -20,3 +20,8 @@ O projeto foi desenvolvido como trabalho final da disciplina de **Programação 
 - Apresentar apenas a parte inteira do resultado das divisões;
 - Permitir que o display exiba mais de três dígitos quando o resultado da operação ultrapassar esse limite;
 - Preservar o resultado exibido no display para que possa ser utilizado como valor na operação seguinte.
+
+
+## Interface da Calculadora
+
+![Interface da Calculadora](imagens/calculadora1.png)
