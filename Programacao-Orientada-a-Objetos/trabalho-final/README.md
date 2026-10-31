@@ -26,5 +26,5 @@ O projeto foi desenvolvido como trabalho final da disciplina de **Programação 
 ## Interface da Calculadora
 
 <p align="left">
-  <img src="imagens/calculadora.png" width="300">
+  <img src="interface-calculadora/calculadora.png" width="300">
 </p>
